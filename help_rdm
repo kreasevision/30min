@@ -1,0 +1,51 @@
+
+         case "cmd7break":  
+                V.cmd7=1 
+                print( "cmd7break",V.cmd7)
+                V.instrument=7  ; #voix
+         case "cmd8break":
+            V.cmd8=1  
+            V.instrument=8  ; #impact
+            V.start2=V.end2
+         #
+         case "cmd1_1":  SC("""~vst1.readProgram("C:/Users/jo/Documents/Vital/vstEffect6_bass.fxp");""")  ; #sythn
+         case "cmd1_2":  SC("""~vst1.readProgram("C:/Users/jo/Documents/Vital/vstEffect6_bass1.fxp");""")  ; #sythn
+         case "cmd1_3":  SC("""~vst1.readProgram("C:/Users/jo/Documents/Vital/vstEffect6_bass2.fxp");""")  ; #sythn
+         case "cmd1_4":SC("""~vst1.readProgram("C:/Users/jo/Documents/Vital/vstEffect6_bass4.fxp");""")  ; #sythn
+         case "cmd2_1": SC("""~vst2.readProgram("C:/Users/jo/Documents/Vital/vital2_reese_track1.fxp");""") #interesting track1
+         case "cmd2_2": SC("""~vst2.readProgram("C:/Users/jo/Documents/Vital/vst2_lead.fxp");""")  ; #sythn
+         case "cmd2_3": SC("""~vst2.readProgram("C:/Users/jo/Documents/Vital/vst2_lead1.fxp");""")  ; #sythn
+#
+         case "cmd3_1":   SC("""~vst3.readProgram("C:/Users/jo/Documents/Vital/vst3_fx.fxp");""")  ; 
+         case "cmd3_2":  SC("""~vst3.readProgram("C:/Users/jo/Documents/Vital/vst3_fx1.fxp");""")  ; 
+#
+         case "cmd4":  V.instrument=4  ; #sythn
+         case "cmd5_2": SC("""~vst5.readProgram("C:/Users/jo/Documents/Vital/vst2_melo3.fxp");""")  ; #sythn
+         case "cmd5_3": SC("""~vst5.readProgram("C:/Users/jo/Documents/Vital/vst2_melo2.fxp");""")  ; #sythn
+         case "cmd5_4": SC("""~vst5.readProgram("C:/Users/jo/Documents/Vital/vst2_melo1.fxp");""")  ; #sythn 
+         case "cmd5_5": SC("""~vst5.readProgram("C:/Users/jo/Documents/Vital/vst2_melo4.fxp");""")  ; #sythn
+         case "cmd5_6":SC("""~vst5.readProgram("C:/Users/jo/Documents/Vital/vst2_melo5.fxp");""")  ; #sythn
+         case "cmd5_7":SC("""~vst5.readProgram("C:/Users/jo/Documents/Vital/vst2_melo6.fxp");""")  ; #sythn
+         case "cmd6":  V.instrument=6  ; #sythn melody
+         #
+         case "cmd1_e":  SC('~vst1.editor')
+         case "cmd2_e":  SC('~vst2.editor') ; #sythn"
+         case "cmd3_e":  SC('~vst3.editor') ; #sythn
+         case "cmd4_e":  SC('~vst4.editor'); #sythn
+         case "cmd5_e":  SC('~vst5.editor'); #sythn melody
+         case "cmd6_e":  SC('~vst5.editor'); #sythn melody 
+         #case "cmdb":   SC('~vst2.editor'); #bass 
+         #
+         case "intro":  V.state='a'  ;
+         case "buildup":  V.state='b'  ;
+         case "dropa":  V.state='c'  ;
+         case "dropb":  V.state='d'  ;
+         case "outro":  V.state='e'  ;
+         case "switch":  V.state='f'  ;
+         case "transition":  V.state='g'  ;
+         case "break":  V.state='i'  ;
+         case "silence":  V.state='h'  ;
+         case "dnb":  V.instrument=100  ;
+         case'help':  window.print(open('C:/Users/jo/Krease/30 minu/help_rdm', 'r').read())
+         case "scope":SC.freqscope()
+         case "1sav":
